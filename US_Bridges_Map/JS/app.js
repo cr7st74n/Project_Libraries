@@ -46,5 +46,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let new_markerMap = 0;
 
 map_US.forEach((bridge)=>{
-    L.marker(bridge.location).bindPopup(`Name:${bridge.name} -\n City:${bridge.city} -\n Span:${bridge.span}`).addTo(map);
+    L.marker(bridge.location).bindPopup(`<strong>Name:</strong> ${bridge.name} <br> 
+    <strong> City:</strong> ${bridge.city} <br> 
+    <strong> Span:</strong> ${bridge.span}`).addTo(map);
 });
