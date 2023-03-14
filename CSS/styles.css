@@ -1,8 +1,23 @@
 
-#longest-bridgesUS{
+*{
+    color: #40301D ;
+}
+
+body{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F2EBDC;
+}
+#longest-bridgesUS{
     width: 700px;
     height: 600px;
-    border: 1px blue solid;
+    border: 1px #517354;
+    border-radius: 10px;
+}
+
+#BridgeChart{
+    width: 600px;
+    height: 800px;
+    border: 1px #517354;
 }

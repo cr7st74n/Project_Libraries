@@ -12,6 +12,8 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
     crossorigin=""></script>
+    <!-- chart CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 
         
     <link rel="stylesheet" type="text/css" href="./CSS/styles.css">
@@ -27,7 +29,15 @@
     </p>
 
     <div id="longest-bridgesUS"></div>
+    <br>
+    <h1>Bridges Chart</h1>
+    <p>In this chart we can see the data of the Bridges showed in the map.</p>
+
+    <div>
+        <canvas id="BridgeChart"></canvas>
+    </div>
 
     
+
 </body>
 </html>
