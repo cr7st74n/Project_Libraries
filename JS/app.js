@@ -42,11 +42,23 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copywrite">OpenStreetMap</a>',    
 }).addTo(map);
 
-//Adding the two bridges that are in the NY/NJ zone
-let new_markerMap = 0;
+//Creating the icons
+const BridgeIcon =  L.icon({
+    iconUrl: "./CSS/img/icons8-bridge-32.png",
+    iconSize:     [20, 27]
+})
+
+//Function to know the longest bridge in US
+const longest_bridge_metrics = [];
+map_US.forEach((br)=>{
+    longest_bridge_metrics.push(br.span);
+});
+
+console.log(longest_bridge_metrics);
 
 map_US.forEach((bridge)=>{
-    L.marker(bridge.location).bindPopup(`<strong>Name:</strong> ${bridge.name} <br> 
+
+    L.marker(bridge.location, {icon: BridgeIcon}).bindPopup(`<strong>Name:</strong> ${bridge.name} <br> 
     <strong> City:</strong> ${bridge.city} <br> 
     <strong> Span:</strong> ${bridge.span}`).addTo(map);
 });
